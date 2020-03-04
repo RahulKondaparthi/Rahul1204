@@ -1,0 +1,39 @@
+Malloc:
+Used for dynamic mem allocation
+malloc() allocates memory block of given size (in bytes) and returns a pointer to the beginning of the block. 
+malloc() doesn’t initialize the allocated memory.
+
+If we try to access the content of memory block(before initializing) then we’ll get segmentation fault error(or ma  
+
+                         void* malloc(size_t size); 
+----------------------------------------------------------------------------------                        
+
+Calloc:
+
+calloc() allocates the memory and also initializes the allocated memory block to zero. 
+If we try to access the content of these blocks then we’ll get 0.
+               void* calloc(size_t num, size_t size);
+-----------------------------------------------------------------------------------
+
+Malloc can we bahave as Calloc using below:
+ptr = malloc(size); 
+memset(ptr, 0, size); 
+
+----------------------------------------------------------------------------
+Free():
+free() function which is used to free memory allocated using malloc() or calloc() or realloc().
+
+                         void free(void *ptr); 
+When memory allocation is done, the actual heap space allocated is one word larger than the requested memory.
+The extra word is used to store the size of the allocation and is later used by free( )                       
+
+
+
+
+How to deallocate memory without using free() ?
+void *reallalloc(void *ptr, size_t 0);
+If “size” is zero, then call to realloc is equivalent to “free(ptr)”. 
+And if “ptr” is NULL and size is non-zero then call to realloc is equivalent to “malloc(size)”.
+
+
+    
