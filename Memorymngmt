@@ -1,0 +1,31 @@
+Memory Layout of C Programs
+A typical memory representation of C program consists of following sections.
+1. Text segment
+2. Initialized data segment
+3. Uninitialized data segment
+4. Stack
+5. Heap
+
+1.text segment : known as a code segment or text, which contains executable instructions.
+
+2.Initialized Data Segment:
+usually called simply the Data Segment. A data segment is a portion of virtual address space of a program, which contains the global variables 
+and static variables that are initialized by the programmer.
+Note that, data segment is not read-only, since the values of the variables can be altered at run time.
+ex :  static int i=10;  global int i=5;
+
+3.Uninitialized Data Segment:bss:block started by sybol:
+Data in this segment is initialized by the kernel to arithmetic 0 before the program starts executing
+all global variables and static variables that are initialized to zero or do not have explicit initialization in source code.
+ex :  static int i=0;  global int i=0;
+
+4.Stack:
+The stack area contains the program stack, a LIFO structure.
+Stack, where automatic variables are stored, along with information that is saved each time a function is called
+temp var,
+Each time a function is called, the address of where to return to and certain information about the caller’s environment,
+such as some of the machine registers, are saved on the stack.
+
+5. Heap:
+Heap is the segment where dynamic memory allocation usually takes place.
+ malloc, realloc, and fre
