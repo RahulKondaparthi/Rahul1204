@@ -1,0 +1,31 @@
+Pre-processing
+Compilation
+Assembly
+Linking
+                            P                     C                       A            L
+File---->Filenmae.c----->Filename.i---------->Filename.s-------------->Filename.o
+
+Pre-processing:
+
+            Removal of Comments
+            Expansion of Macros
+            Expansion of the included files.
+            Conditional compilation
+            
+The preprocessed output is stored in the filename.i
+
+Compilation:
+
+The next step is to compile filename.i and produce an; intermediate compiled output file filename.s. 
+This file is in assembly level instructions. 
+
+Assembler:
+
+In this phase the filename.s is taken as input and turned into filename.o by assembler.
+This file contain machine level instructions.
+
+Linking
+
+This is the final phase in which all the linking of function calls with their definitions are done. 
+Linker knows where all these functions are implemented.
+Linker does some extra work also, it adds some extra code to our program which is required when the program starts and ends.
