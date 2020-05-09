@@ -1,0 +1,28 @@
+#include<stdio.h>
+ 
+int main()
+{
+   int number,i;
+   int first=0, second=1, next;
+   
+   
+   printf("Enter the number of terms :");
+   scanf("%d",&number);
+   
+   for(i=0; i<number ;i++)
+   {
+		if(i<=1)
+		{
+			next=i;
+		}   	
+		else
+		{
+	   		next=first+second;
+			first=second;
+			second=next;		
+		}
+		printf("%d\n",next);   	
+   }
+ 
+   return 0;
+}
