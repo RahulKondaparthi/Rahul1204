@@ -1,0 +1,16 @@
+int BinarySearch_Iterative(int A[], int size, int element)
+{
+	int start = 0;
+	int end = size-1;
+	while(start<=end)
+	{
+		int mid = (start+end)/2;
+		
+		if( A[mid] ==  element)	return mid; 		// Check if element is present at mid
+		
+		else if( element < A[mid] )	end = mid-1;	// If element greater, ignore left half
+		
+		else start = mid+1;							// If element is smaller, ignore right half
+	}
+	return -1;										// if we reach here, then element was not present
+}
