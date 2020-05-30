@@ -1,0 +1,40 @@
+With a union, all members share the same memory. 
+With a struct, they do not share memory, so a different space in memory is allocated to each member of the struct.
+
+For example:
+
+union foo
+{
+ int x;
+ int y;
+};
+
+foo f;
+f.x = 10;
+printf("%d\n", f.y);
+Here, we assign the value of 10 to foo::x. Then we output the value of foo::y, which is also 10 since x and y share the same memory.
+Note that since all members of a union share the same memory, the compiler must allocate enough memory to fit the largest member of the union. So a union containing a char and a long would need enough space to fit the long.
+
+Can't use x and y both at a time.
+
+ex:
+#include <stdio.h> 
+
+union test { 
+	int x; 
+	char y; 
+}; 
+
+int main() 
+{ 
+	union test p1; 
+	p1.x = 65; 
+
+	// p2 is a pointer to union p1 
+	union test* p2 = &p1; 
+
+	// Accessing union members using pointer 
+	printf("%d %c", p2->x, p2->y); 
+	return 0; 
+} 
+ op = 65 A
