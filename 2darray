@@ -1,0 +1,5 @@
+
+
+
+int *arr = (int *)malloc(r * c * sizeof(int));
+
