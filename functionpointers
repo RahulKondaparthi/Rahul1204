@@ -1,0 +1,42 @@
+example:
+
+
+void function()
+{
+printf("hello world");
+}
+
+void (*function_ptr)();
+
+void (*function_ptr)() = function;
+//now call the function ptr what it will print
+
+void (*function_ptr)();   // we can call function pointer with syntax and without function_ptr(); also works after assigning
+============================================================================================================================
+example 2:
+
+
+void substarct(int x,int y);
+{
+  int z= x-y;
+  printf(" values is %d",z);
+  
+ }
+ 
+ void(* fun_substartion)(int,int)= sustract;
+ 
+ fun_substarction(10,20);   // or (*fun_substraction)(10,20);
+ 
+ ===========================================================================================================================
+ example 3 :
+ 
+ int substarct(int x,int y);
+{
+  return x-y;
+ }
+ 
+ int (*fun_substraction)(int,int) = substraction;
+ 
+ int y = (*fun_substartion)(10,20);
+ 
+ =============================================================================================================================
