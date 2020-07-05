@@ -1,0 +1,12 @@
+int main()
+{
+    printf("Hello World");
+    int s=100;
+    int *ptr = &s;
+    int *str=ptr;
+    printf("%d %d %d %d",ptr,&s,*ptr,*str);
+    return 0;
+}
+
+
+1756720 1756720 100 100
