@@ -1,0 +1,12 @@
+
+Unless that value is 0 (in which case you can omit some part of the initializer and the corresponding elements will be initialized to 0), there's no easy way.
+
+Don't overlook the obvious solution, though:
+
+int myArray[10] = { 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 };
+Elements with missing values will be initialized to 0:
+
+int myArray[10] = { 1, 2 }; // initialize to 1,2,0,0,0...
+So this will initialize all elements to 0:
+
+int myArray[10] = { 0 }; // all elements 0
