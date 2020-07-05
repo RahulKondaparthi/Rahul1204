@@ -1,0 +1,25 @@
+There are many ways to get a segfault, at least in the lower-level languages such as C(++). A common way to get a segfault is to dereference a null pointer:
+
+int *p = NULL;
+*p = 1;
+
+
+
+Another segfault happens when you try to write to a portion of memory that was marked as read-only:
+
+char *str = "Foo"; // Compiler marks the constant string as read-only
+*str = 'b'; // Which means this is illegal and results in a segfault
+
+
+
+
+Dangling pointer points to a thing that does not exist any more, like here:
+
+char *p = NULL;
+{
+    char c;
+    p = &c;
+}
+// Now p is dangling
+The pointer p dangles because it points to character variable c that ceased to exist after the block ended. 
+And when you try to dereference dangling pointer (like *p='A'), you would probably get a segfault.
