@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    
+    char s[100];
+    
+    scanf("%s",s);
+    
+    for (int i = 0; s[i] != '\0'; i++) { 
+
+		// Counting occurrences of s[i] 
+		int count = 1; 
+		while (s[i] == s[i + 1]) { 
+			i++; 
+			count++; 
+		} 
+		printf("%c%d",s[i],count);
+    }
+    return 0;
+}
+
+op:
+raaahuulllrrr                                                                                                                 
+r1a3h1u2l3r3       
