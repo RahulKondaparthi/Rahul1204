@@ -1,13 +1,15 @@
-void bin(unsigned n) 
-{ 
-	unsigned i; 
-	for (i = 1 << 31; i > 0; i = i / 2)    //i/2 means 2power32/2 ==2power31 ...
-		(n & i)? printf("1"): printf("0"); 
-} 
+#include <stdio.h>
 
-int main(void) 
-{ 
-	bin(7); 
-	printf("\n"); 
-	bin(4); 
-} 
+int main()
+{
+    int n,bit=31;
+    scanf("%d",&n);
+    for(bit=31;bit>=0;bit--)
+    {
+        if((1<<bit)&n)
+        printf("1");
+        else
+        printf("0");
+    }
+    return 0;
+}
