@@ -112,3 +112,22 @@ Lastly convert resultant string to integer using atoi() function
 year=atoi(y);
 printf("year=%d",year);
 ===============================================================================================================================
+In the program, 'a' is used instead of 97 and 'z' is used instead of 122. Similarly, 'A' is used instead of 65 and 'Z' is used instead of 90.
+Convert to upper case of letters
+#include <stdio.h>
+#include <string.h>
+int main() {
+   char s[100];
+   int i;
+   printf("\nEnter a string : ");
+   //gets(s);
+  
+   for (i = 0; s[i]!='\0'; i++) {
+      if(s[i] >= 'a' && s[i] <= 'z') {
+         s[i] = s[i] -32;
+      }
+   }
+   printf("\nString in Upper Case = %s", s);
+   return 0;
+}
+============================================================================================================================================
