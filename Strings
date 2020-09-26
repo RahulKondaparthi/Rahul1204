@@ -93,4 +93,22 @@ op:
 Before memset(): GeeksForGeeks is for programming geeks.
 After memset(): GeeksForGeeks........programming geeks.
 ============================================================================================================================
+Coverat a string into number:
+---------------------------
+First extract characters from left bracket '(' using strchr() function.
 
+char *name="The Matrix(1999)";
+char *ps;
+ps=strchr(name,'(');
+Then add each character within brackets () to an char array
+
+char y[5]=""; int  p;
+for (p=1;p<strlen(ps+1);p++) {
+   y[p-1]=ps[p];
+}
+y[4]='\0';
+Lastly convert resultant string to integer using atoi() function
+
+year=atoi(y);
+printf("year=%d",year);
+===============================================================================================================================
