@@ -70,3 +70,26 @@ int stringCompare(char mj1[], char mj2[])  // function definition
     else
         return 0;
 }=======================================================================================================================
+memset function():memset() is used to fill a block of memory with a particular value.
+
+void *memset(void *ptr, int x, size_t n);
+ex:
+// C program to demonstrate working of memset() 
+#include <stdio.h> 
+#include <string.h> 
+
+int main() 
+{ 
+	char str[50] = "GeeksForGeeks is for programming geeks."; 
+	printf("\nBefore memset(): %s\n", str); 
+
+	// Fill 8 characters starting from str[13] with '.' 
+	memset(str + 13, '.', 8*sizeof(char)); 
+
+	printf("After memset(): %s", str); 
+	return 0; 
+} 
+op:
+Before memset(): GeeksForGeeks is for programming geeks.
+After memset(): GeeksForGeeks........programming geeks.
+============================================================================================================================
