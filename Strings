@@ -70,7 +70,7 @@ int stringCompare(char mj1[], char mj2[])  // function definition
     else
         return 0;
 }=======================================================================================================================
-memset function():memset() is used to fill a block of memory with a particular value.
+memset function():memset() is used to fill a block of memory with a particular value., memset works character by character
 
 void *memset(void *ptr, int x, size_t n);
 ex:
@@ -93,3 +93,4 @@ op:
 Before memset(): GeeksForGeeks is for programming geeks.
 After memset(): GeeksForGeeks........programming geeks.
 ============================================================================================================================
+
