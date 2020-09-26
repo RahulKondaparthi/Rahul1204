@@ -23,3 +23,13 @@ char *p = NULL;
 // Now p is dangling
 The pointer p dangles because it points to character variable c that ceased to exist after the block ended. 
 And when you try to dereference dangling pointer (like *p='A'), you would probably get a segfault.
+
+
+Accessing an array out of bounds
+Dereferencing NULL pointers
+Dereferencing freed memory
+Dereferencing uninitialized pointers
+Incorrect use of the "&" (address of) and "*" (dereferencing) operators
+Improper formatting specifiers in printf and scanf statements
+Stack overflow
+Writing to read-only memory
