@@ -1,3 +1,24 @@
+We have used the integer and character variables many times in our program. Here we will see how they are stored in the memory.
+
+In C the character values are also stored as integers. In the following code, we shall put 270 into a character type data.
+So the binary equivalent of 270 is 100001110, but takes only first 8-bits from right. So the result will be (00001110), that is 14.
+Then stores the value into variable a. It also gives warning for overflow.
+
+In the next variable y, we are trying to store negative number say -130. The negative number will be stored as 2’s complemented method. 
+So the binary of 130 is (10000010). The 2’s complemented value is 01111101 + 1 = 01111110. Here also the right most 8-bits are taken.
+So the result will be (01111110) = 126
+
+Example
+#include <stdio.h>
+int main() {
+   char x = 270;
+   char y = -130;
+   printf("The value of x is: %d\n", x);
+   printf("The value of y is: %d", y);
+}
+Output
+The value of x is: 14
+The value of y is: 126
 we can store 8 bit integer value.
 
 for signed char the range is -128   to +128
