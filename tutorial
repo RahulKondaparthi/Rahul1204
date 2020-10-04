@@ -1,0 +1,11 @@
+1)How can I get the list of files in a directory using C/C++?
+  #include<stdio.h>
+  int main()
+  {
+   char command[20] = "ls -l";
+   system(command);
+   return 0;
+   }
+   
+2) How to debug a core in C/C++?
+ A process dumps core when it is terminated by operating system due to fault in program.The most common fault is that program accessing invalid pointer(NNULL) or value out area of memory
