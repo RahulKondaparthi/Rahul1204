@@ -166,4 +166,15 @@
     return 0;
 }
 
+11) strings in C?
+char myStr[size] = “string”;
+char myStr[size] = { ‘s’,’t’,’r’,’i’,’n’,’g’,’\0’ };
+The following table displays functions of string in C language.
 
+Function	Purposes
+strcpy(s1, s2)	Copies string s2 into string s2
+strcat(s1, s2)	Concatenates s2 onto end of s1
+strlen(s1)	Returns the length of string s1
+strcmp(s1, s2)	Returns 0 when s1 and s2 are same Greater than 0 when ASCII value of s1 is greater than s2 Lesser than 0 when ASCII value of s1 is lesser than s2
+strchr(s1, ch)	Returns the pointer to the first occurence of character ch in string s1
+strstr(s1, s2)	Returns the pointer to the first occurence of string s2 in string s1
