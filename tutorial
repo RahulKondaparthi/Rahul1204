@@ -97,3 +97,12 @@
      printf("sp chararcter: %d\n",special);
    return 0;
 }
+
+7) typecasting in C?
+  #include <stdio.h>
+  int main() {
+    float c = 5.55;
+    int s = (int)c+1;
+    printf("Explicit Conversion : %d\n",s);
+    return 0;
+}
