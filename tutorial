@@ -70,3 +70,30 @@
     printf("%d",s);
     return 0;
 }
+
+6) Count spaces, uppercase and lowercase in a sentence using C?
+   #include<stdio.h>
+   int main() {
+    char str[100],i;
+    int upper = 0, lower = 0, number = 0, special = 0,whitesp=0;
+    printf("enter string");
+    gets(str);
+    for (i = 0; i < str[i]!='\0'; i++) {
+         if (str[i] >= 'A' && str[i] <= 'Z')
+         upper++;
+         else if (str[i] >= 'a' && str[i] <= 'z')
+         lower++;
+         else if (str[i]>= '0' && str[i]<= '9')
+         number++;
+         else if(str[i]==' ')
+         whitesp++;
+         else
+         special++;
+     }
+     printf("Upper case letters: %d\n",upper);
+     printf("lower case letters: %d\n",lower);
+     printf("Numbers: %d\n",number);
+     printf("whitespace: %d\n",whitesp);
+     printf("sp chararcter: %d\n",special);
+   return 0;
+}
