@@ -106,3 +106,32 @@
     printf("Explicit Conversion : %d\n",s);
     return 0;
 }
+8)storage classes?
+   auto: or local varibles;
+   Auto storage class is the default storage class for all the local variables. It is created when function is called. 
+   When the execution of function is completed, variables are destroyed automatically.
+       Scope − auto variables are local variables to the function block.
+       Default value − Garbage value is the default initialized value.
+       Lifetime − Lifetime of auto variable is bound by the block in which it is defined
+ 
+ 
+   extern
+   External variables are also known as global variables. These variables are defined outside the function. 
+   These variables are available globally throughout the function execution. The value of global variables can be modified by the functions.
+        Scope − They are not bound by any function. They are everywhere in the program i.e. global.
+        Default value − Default initialized value of global variables are Zero.
+        Lifetime − Till the end of the execution of the program.
+   
+   static
+   Static variables are initialized only once. Compiler persist the variable till the end of the program. Static variable can be defined inside or outside the function.
+        Scope − They are local to the block.
+        Default value − Default initialized value is Zero.
+        Lifetime − Till the end of the execution of the program.
+        
+ register
+ Register variables tell the compiler to store the variable in CPU register instead of memory. 
+ Frequently used variables are kept in registers and they have faster accessibility. We can never get the addresses of these variables.
+        Scope − They are local to the function.
+        Default value − Default initialized value is the garbage value..
+        Lifetime − Till the end of the execution of the block in which it is defined.
+
