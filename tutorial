@@ -12,5 +12,16 @@
  The most common fault is that program accessing invalid pointer(NNULL) or value out area of memory..It is useful for debugging.
  The core is dumped to the /proc/sys/kernel directory by default. To debug a core, the program must be compiled with the -g option. 
  
+3)Segmentation fault ?
+  A segmentation fault occurs when a program aacees to memory(beyond the limits) that is not allowed by operating system.
+         Accessing an array out of bounds.(indexed array where the index is outside of the array bounds)
+         Dereferencing NULL pointers
+         Dereferencing freed memory
+         Dereferencing uninitialized pointers
+         Incorrect use of the "&" (address of) and "*" (dereferencing) operators
+         Improper formatting specifiers in printf and scanf statements
+         Stack overflow
+         Writing to read-only memory
+4)
  
  
