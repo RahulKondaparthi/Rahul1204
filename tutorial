@@ -218,3 +218,22 @@ int main(){
    }
    printf(" %d ", max);
 }
+
+13)swap the strings?
+#include<stdio.h>
+#include <string.h>
+int main() {
+   char st1[] = "My 1st string";
+   char st2[] = "My 2nd string";
+   char swap;
+   int i = 0;
+   while(st1[i] != '\0') {
+      swap = st1[i];
+      st1[i] = st2[i];
+      st2[i] = swap;
+      i++;
+   }
+   printf("After swapping s1 : %s\n", st1);
+   printf("After swapping s2 : %s\n", st2);
+   return 0;
+}
