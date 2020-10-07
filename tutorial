@@ -178,3 +178,22 @@ strlen(s1)	Returns the length of string s1
 strcmp(s1, s2)	Returns 0 when s1 and s2 are same Greater than 0 when ASCII value of s1 is greater than s2 Lesser than 0 when ASCII value of s1 is lesser than s2
 strchr(s1, ch)	Returns the pointer to the first occurence of character ch in string s1
 strstr(s1, s2)	Returns the pointer to the first occurence of string s2 in string s1
+
+12)how to find the maxmum num threads created?
+#include<pthread.h>
+#include<stdio.h>
+/*Leave the function empty as it
+only demonstrates work of thread*/
+void *create ( void *){
+}
+//main function
+int main(){
+   int max = 0, ret = 0;
+   pthread_t th;
+   //Iterate until 0 is returned
+   while (ret == 0){
+      ret = pthread_create (&th, NULL, create, NULL);
+      max++;
+   }
+   printf(" %d ", max);
+}
