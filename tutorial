@@ -179,6 +179,27 @@ strcmp(s1, s2)	Returns 0 when s1 and s2 are same Greater than 0 when ASCII value
 strchr(s1, ch)	Returns the pointer to the first occurence of character ch in string s1
 strstr(s1, s2)	Returns the pointer to the first occurence of string s2 in string s1
 
+#include <stdio.h>
+#include <string.h>
+int main () {
+   char s1[10] = "Hello";
+   char s2[10] = "World";
+   int len, com ;
+   strcpy(s1, s2);
+   printf("Strings s1 and s2 : %s\t%s\n", s1, s2 );
+   strcat( s1, s2);
+   printf("String concatenation: %s\n", s1 );
+   len = strlen(s1);
+   printf("Length of string s1 : %d\n", len );
+   com = strcmp(s1,s2);
+   printf("Comparison of strings s1 and s2 : %d\n", com );
+   return 0;
+}
+Output
+Strings s1 and s2 : WorldWorld
+String concatenation: WorldWorld
+Length of string s1 : 10
+Comparison of strings s1 and s2 : 87
 12)how to find the maxmum num threads created?
 #include<pthread.h>
 #include<stdio.h>
