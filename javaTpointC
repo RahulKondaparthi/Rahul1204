@@ -95,3 +95,13 @@ int main()
        if(arr[i] > max)               // for minimum elemnt <
            max = arr[i];  
     }    
+5)duplicates in array
+    //Searches for duplicate element  
+    for(int i = 0; i < length; i++) {  
+        for(int j = i + 1; j < length; j++) {  
+            if(arr[i] == arr[j])  
+                printf("%d\n", arr[j]);  
+        }  
+    }  
+    
+    
