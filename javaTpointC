@@ -86,4 +86,12 @@ int main()
         }   
     }  
     
-    
+  4)largest elmentin the array
+  int max = arr[0];  
+      
+    //Loop through the array  
+    for (int i = 0; i < length; i++) {   
+        //Compare elements of array with max  
+       if(arr[i] > max)               // for minimum elemnt <
+           max = arr[i];  
+    }    
