@@ -23,3 +23,9 @@ Therefore a[5] will evaluate to:
 and 5[a] will evaluate to:
 
 *(5 + a)
+-----------------------------------------------------------------------
+char a[] = "string literal";   // readoonly memory and copied to new mmory into stack, we can modify values.
+
+char *p  = "string literal";   // readonly memory cant change the values
+------------------------------------------------------------------------
+
