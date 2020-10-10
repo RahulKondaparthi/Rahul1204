@@ -6,6 +6,9 @@ malloc() doesn’t initialize the allocated memory.
 If we try to access the content of memory block(before initializing) then we’ll get segmentation fault error(or ma  
 
                          void* malloc(size_t size); 
+int *ptr;
+ptr = malloc(10 * sizeof (*ptr));               /* without a cast */
+ptr = (int *)malloc(10 * sizeof (*ptr));        /* with a cast */
 ----------------------------------------------------------------------------------                        
 
 Calloc:
