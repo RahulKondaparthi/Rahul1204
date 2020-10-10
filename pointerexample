@@ -10,3 +10,19 @@ int main()
 
 
 1756720 1756720 100 100
+
+---------------------------------------------------------------------------------------------------------------------
+Why double pointer?
+
+If you want to have a list of characters (a word), you can use char *word
+
+If you want a list of words (a sentence), you can use char **sentence
+
+If you want a list of sentences (a monologue), you can use char ***monologue
+
+If you want a list of monologues (a biography), you can use char ****biography
+
+If you want a list of biographies (a bio-library), you can use char *****biolibrary
+
+If you want a list of bio-libraries (a ??lol), you can use char ******lol
+-----------------------------------------------------------------------------------------------------------------------
