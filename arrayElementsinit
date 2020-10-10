@@ -10,3 +10,16 @@ int myArray[10] = { 1, 2 }; // initialize to 1,2,0,0,0...
 So this will initialize all elements to 0:
 
 int myArray[10] = { 0 }; // all elements 0
+
+----------------------------------------------------------------------
+why a[5] == 5[a]?
+The C standard defines the [] operator as follows:
+
+a[b] == *(a + b)
+
+Therefore a[5] will evaluate to:
+
+*(a + 5)
+and 5[a] will evaluate to:
+
+*(5 + a)
