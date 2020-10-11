@@ -47,3 +47,44 @@ int main()
 	return 0;
 }
 ====================================================================================================
+set bit count in a number?
+
+#include <stdio.h>
+
+int main()
+{
+    int n,bit=31;
+    scanf("%d",&n);
+    for(bit=31;bit>=0;bit--)
+    {
+        if((1<<bit)&n)
+        printf("1");
+        else
+        printf("0");
+    }
+    return 0;
+}
+========================================================================================================
+how to turn off particular bit ?
+
+#include<stdio.h>
+ 
+// Returns a number that has all bits same 
+// except the bit which is made 0
+int TurnOffParticularBit(int number, int bit)
+{
+    // bit must be greater than 0
+    if (bit <= 0) return number;
+ 
+    // Do & of number with a number with all set bits except
+    // the bit
+    return (number & ~(1 << (bit - 1)));
+}
+ 
+int main()
+{
+     printf("%d",TurnOffParticularBit(15, 4)  );
+
+     return 0;
+}
+============================================================================================================
