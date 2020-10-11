@@ -13,3 +13,37 @@ int main()
     }
     return 0;
 }
+
+binary to decimal conversion:\
+============================
+#include <stdio.h>
+ 
+/* Driver function */ 
+int BinaryToDecimal(long int binary) 
+{
+	long int decimal = 0, i = 1, remainder;
+	
+	/* Iterate unitl number becomes zero */
+	while (binary != 0)
+    {
+        remainder = binary % 10;
+        decimal = decimal + remainder * i;
+        i = i * 2;
+        binary = binary / 10;
+    }
+    
+    return decimal;
+}
+	
+/* Main Method */
+int main()
+{
+    long int binary = 10011011;
+    
+    printf("Equivalent Decimal value:     %ld \n\n", BinaryToDecimal(binary));
+     
+    printf("Equivalent hexadecimal value: %lX \n\n", BinaryToDecimal(binary));
+    
+	return 0;
+}
+====================================================================================================
