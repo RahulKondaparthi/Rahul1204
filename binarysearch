@@ -1,3 +1,5 @@
+For sorted array,
+time complexity 0(log n)
 int BinarySearch_Iterative(int A[], int size, int element)
 {
 	int start = 0;
@@ -14,3 +16,17 @@ int BinarySearch_Iterative(int A[], int size, int element)
 	}
 	return -1;										// if we reach here, then element was not present
 }
+========================================================================================================================================================================
+Linear search
+unsorted array
+time complexity us 0(n)
+
+int search(int arr[], int n, int x) 
+{ 
+    int i; 
+    for (i = 0; i < n; i++) 
+        if (arr[i] == x) 
+            return i; 
+    return -1; 
+} 
+============================================================================================================================================================================
