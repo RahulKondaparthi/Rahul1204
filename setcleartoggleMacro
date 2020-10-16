@@ -51,4 +51,63 @@ int main()
 	printf("b>>1 = %d\n", b>>1); 
 	return 0; 
 } 
+================================================================================================================\
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+     int number,pos,bit;
+    scanf("%d %d",&number,&pos);
+    
+    //to check th nth position bit 0 or 1
+   // bit = ((number>>pos)&1);
+    //printf("%d",bit);
+    
+    //to set the bit in given position
+    //number = number | (1 << pos);
+    //printf("%d",number);
+    
+    //to make the bit to 0 at given pos,dont care oldbit
+    //number = number &( ~( 1 << pos));
+    //printf("%d",number);
+    
+    //to make the bit 0 if 1 and 1 if 0, toggle
+    //number = number ^ (1 << pos);
+   // printf("%d",number);
+   
+    /*set bit count in a number
+    int count=0;
+    while(number)
+    {
+        if(number & 1)                      // for tariling zeros if(!(number & 1))
+        count++;                            // if 8  it will have 3 zeros if 16 there 4 zeros ..
+        number = number >> 1;
+        
+    }
+    printf("%d",count); */
+    
+    
+    /* binary representation of a number
+    for(int i=31; i >= 0;i--)
+    {
+        
+    if( (1<<i) & number)
+    printf("1");
+    else
+    printf("0");
+    
+    } */
+
+    
+    return 0;
+}
+
 
